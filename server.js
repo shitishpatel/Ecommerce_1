@@ -5,7 +5,8 @@ import morgan from "morgan";
 import authRoutes from './routes/authRoute.js';
 import categoryRoutes from './routes/categoryRoute.js'
 import productRoutes from './routes/productRoute.js';
-import {fileURLToPath} from 'url';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 // import paymentRoutes from './routes/paymetRoutes.js'
 
 import cors from 'cors';
@@ -21,7 +22,7 @@ dotenv.config();
 
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname=path.dirname(__filename);
+const __dirname = dirname(__filename);
 
 // rest Object
 const app= express();
